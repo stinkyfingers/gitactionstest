@@ -21,3 +21,18 @@ terraform {
     profile = "jds"
   }
 }
+
+
+output "http_listener" {
+  value = "${data.terraform_remote_state.stinkyfingers.stinkyfingers_https_listener}"
+}
+
+data "terraform_remote_state" "stinkyfingers" {
+  backend = "s3"
+  config = {
+    bucket  = "remotebackend"
+    key     = "stinkyfingers/terraform.tfstate"
+    region  = "us-west-1"
+    profile = "jds"
+  }
+}
