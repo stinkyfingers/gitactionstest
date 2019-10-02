@@ -4,7 +4,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "gitactions_test"
+  bucket = "gitactions-test"
   acl = "private"
   tags = {
     Name = "gitactions test bucket"
