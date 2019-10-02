@@ -24,7 +24,7 @@ terraform {
 
 
 output "http_listener" {
-  value = "${data.terraform_remote_state.stinkyfingers.stinkyfingers_https_listener}"
+  value = "${data.terraform_remote_state.stinkyfingers.outputs.stinkyfingers_https_listener}"
 }
 
 data "terraform_remote_state" "stinkyfingers" {
